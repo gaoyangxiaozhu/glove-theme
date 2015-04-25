@@ -1,0 +1,9 @@
+if site.posts.length
+    .archiveslist
+        p.asidetitle
+            a(href="#{config.root}archives") #{__('archive_a')}
+            span
+        != list_archives({format:__('archives_time_format')})
+
+
+

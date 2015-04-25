@@ -1,0 +1,28 @@
+div#pageHeader
+    if theme.imglogo.enable && theme.imglogo.src
+        #imglogo
+            a(href="#{config.root}")
+                img(src="#{config.root}#{theme.imglogo.src}" alt="#{config.title}" title="#{config.title}")
+    #textlogo
+        h1.site-name
+            a(href="#{config.root}" title="#{config.title}")  #{config.title}
+    .icon
+        if theme.weibo
+            a.icon-weibo(href="#{theme.weibo}" target="_blank")
+        if theme.github
+            a.icon-github(href="#{theme.github}" target="_blank")
+        if theme.facebook
+            a.icon-facebook(href="#{theme.facebook}" target="_blank")
+        if theme.rss
+            a.icon-rss(href="#{theme.rss}" target="_blank")
+
+
+    .navbar
+        a.navbutton.navmobile(href="#" title="#{__('menu')}")
+    nav.animated
+        ul.clearfix
+            each i, val in theme.menu
+                li
+                    a(href="#{i}")  #{val}
+
+

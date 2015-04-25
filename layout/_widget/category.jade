@@ -1,0 +1,12 @@
+if site.categories.length
+    .categorieslist
+        p.asidetitle
+            | #{__('categories')}
+            span
+        ul.clearfix
+            - site.categories.sort("name").each(function(item){
+                li
+                    a(href="#{config.root}#{item.path}" title="#{item.name}") #{item.name}
+                        |(#{item.posts.length})
+            -})
+

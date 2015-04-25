@@ -1,0 +1,15 @@
+extends base.jade
+block content
+    #main
+        - var index=true , desc=true
+        - page.posts.each(function(item){
+            include  _partial/article.jade
+
+        - })
+        if page.total > 1
+           nav#page-nav.clearfix.
+            paginator({
+                prev_text: '&laquo; Prev',
+                next_text: 'Next &raquo;'
+            })
+

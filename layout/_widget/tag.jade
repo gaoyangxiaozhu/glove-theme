@@ -1,0 +1,11 @@
+if site.tags.length
+    .tagslist
+        p.asidetitle #{__('tags')}
+            span
+        ul.clearfix
+            - site.tags.sort("name").limit(20).each(function(item){
+                li
+                    a(href="#{config.root}#{item.path}" title="#{item.name}") #{item.name}
+                        sup #{item.posts.length}
+            -})
+
