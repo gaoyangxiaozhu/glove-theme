@@ -1,0 +1,197 @@
+//sidebar
+#asidepart
+  background none
+  margin 1em 0 0
+  padding 0.5em 2% 1em
+  @media tablet
+    position relative
+    float left
+    width 18%
+    margin 2em 3% 0 0
+
+.asidetitle
+  font-weight  bolder
+  font-size 1.1em
+  color #3D8B76
+  padding 0 0 0.3125em 0
+  border-bottom 0.15em dashed #3cbb7d
+  a
+    &:hover
+      color color-theme
+      transition color .5s
+
+//categories
+.categorieslist
+.tagslist
+.tagcloudlist
+.recentlist
+.archiveslist
+  p > span
+    &:before
+      font-family "FontAwesome"
+      margin-left 0.5em
+      font-size inherit
+.categorieslist
+  p > span
+    &:before
+      content "\f07b"
+.tagslist
+  p > span
+    &:before
+      content "\f02c"
+.tagcloudlist
+  p > span
+    &:before
+      content "\f0c2"
+.recentlist
+  p > span
+    &:before
+      content "\f0f6"
+.archiveslist
+  p > span
+    &:before
+      content "\f02d"
+
+.categorieslist
+  @media mini
+    width 45%
+    float left
+    margin 0 5% 0 0
+  @media tablet 
+    width 100%
+    float none
+    margin 1em 0 0
+  li 
+    float left
+    width auto
+    display inline-block
+    a
+      display block
+      padding 0.6em 0.6em
+      &:hover
+        color color-theme
+
+//tag
+.tagslist
+  margin 1em 0 0
+  @media mini
+    width 45%
+    float left
+    margin 0 5% 0 0
+  @media tablet 
+    width 100%
+    float none
+    margin 1em 0 0
+  ul
+    padding 0.5em 0
+  ul li
+    float left
+    a
+      display block
+      margin 0.3125em
+      padding 0.125em 0.3125em
+      background lighten(color-gray, 30%)
+      &:hover
+        color color-theme
+        background lighten(color-gray, 50%)
+
+//archive
+.archiveslist
+  @media mini
+    width 45%
+    float left
+    margin 0 5% 0 0
+  @media tablet 
+    width 100%
+    float none
+    margin 1em 0 0
+  li 
+    font-size 0.8em
+    line-height 2em
+    a
+      padding 0.4em
+      &:hover
+        color color-theme
+        transition color .25s
+  .archive-list-count
+    &:before
+      content "("
+    &:after
+      content ")"
+          
+.archive-list 
+  padding 0.5em 0 
+
+.archive-float 
+  ul
+    padding 0 
+  li
+    float left
+    margin 0.3em
+    @media tablet
+      float none
+
+//tagcloud
+.tagcloudlist
+  @media mini
+    width 45%
+    float left
+    margin 0 5% 0 0
+  @media tablet 
+    width 100%
+    float none
+    margin 1em 0 0
+  .tagcloudlist
+    a
+      padding 0.2em
+      display block
+      float left
+      &:hover
+        color color-theme
+        transition color .25s
+
+//links
+.linkslist
+  margin-top 0.5em 
+  @media mini
+    width 45%
+    float left
+    margin 0 5% 0 0
+  @media tablet 
+    width 100%
+    float none
+    margin 1em 0 0
+  ul
+    padding 0.5em 0
+    a
+      font-size 1em
+      line-height line-height
+      display block
+      padding 0 3%
+      &:hover
+        color color-theme
+        transition color .25s
+
+//recentPosts
+.recentlist
+  @media mini
+    width 45%
+    float left
+    margin 0 5% 0 0
+  @media tablet
+    width 100%
+    float none
+    margin 1em 0 0
+  ul
+    background transparent !important
+    padding 0.5em 0
+    li
+      font-size 0.8em
+      line-height 2em
+      a
+        padding 0.4em
+        font-size inherit
+        color inherit
+        &:hover
+          color color-theme
+          transition color .25s

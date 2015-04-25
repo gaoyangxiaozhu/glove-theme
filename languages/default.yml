@@ -1,0 +1,19 @@
+Home: home
+Archives: Archives
+categories: Categories
+search: Search
+tags: Tags
+tagcloud: "Tag Cloud"
+recentPosts: "recent articles"
+prev: Prev
+next: Next
+comment: Comments
+contents: Contents
+archive_a: Archives
+archive_b: "Archives: %s"
+page: "Page %d"
+recent_posts: "Recent Posts"
+menu: Menu
+links: Links
+rss: RSS
+archives_time_format: YYYY-MM

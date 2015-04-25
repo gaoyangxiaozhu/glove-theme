@@ -1,0 +1,16 @@
+#main(class="#{item.layout}" itemscope itemprop="blogPost")
+    article(itemprop="articleBody")
+        include header.jade
+        .article-content
+            include gallery.jade
+            if (table&&(item.toc !== false)) && theme.toc.article
+                #toc.toc-article
+                    strong.toc-title
+                        | #{__('contents')}
+                    | #{ toc(item.content)}
+            !=item.content
+         include footer.jade
+    include pagination.jade
+    include  comment.jade
+
+

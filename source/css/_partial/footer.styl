@@ -1,0 +1,27 @@
+footer
+  margin-top 1em
+  background color-footer
+  padding 1.5em 1em
+
+#footer
+  width 95%
+  margin 0 auto
+  overflow hidden
+  position relative
+  background: #222222 url('/img/dark_back.png')
+.copyright
+  if ShowCustomFont
+    font-smoothing()
+    font-family font-custom-family
+  else
+    font-family font-default
+  font-size 2em
+  width 100%
+  color color-white
+  text-align center
+  @media mini
+    float left
+  a
+    color color-white
+    &:hover
+      color color-blue

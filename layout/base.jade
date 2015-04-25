@@ -1,0 +1,23 @@
+html(lang="en")
+    head
+        block head
+            include _partial/head.jade
+    body
+        header
+            block header
+                include _partial/header.jade
+        #container
+            if !(page.layout != 'post' && (page.category!=null||page.tag!=null||page.archive!=null))
+                include _partial/sidepar.jade
+            block content
+
+        footer
+            block footer
+                include _partial/footer.jade
+        block extra
+            include _partial/after_footer.jade
+
+
+
+
+

@@ -1,0 +1,8 @@
+if item.photos && item.photos.length
+    .article-gallery
+        .article-gallery-photos
+            - item.photos.forEach(function(photo,i){
+                a.article-gallery-img.fancybox(href="photo" rel="gallery_#{item.id}")
+            -})
+                    img(src="photo" itemprop="image")
+

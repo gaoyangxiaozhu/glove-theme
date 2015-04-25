@@ -1,0 +1,29 @@
+section(class="#{item.layout}" itemscope itemprop="blogPost")
+    if item.link
+        a(href="#{item.link}" target="_blank")
+    else
+        a(href="#{config.root}#{item.path}" title="#{item.title}" itemprop="url")
+            h1(itemprop="name") #{item.title}
+            if desc
+                if item.description
+                    p(itemprop="description") #{item.description}
+                else
+                    if item.excerpt
+                        p(itemprop="description")
+                            | #{strip_html(item.excerpt).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)}
+                    else
+                        p(itemprop="description")
+                            | #{strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)}
+            time(datatime="#{date_xml(item.date)}" itemprop="dataPublished") #{item.date.format(config.date_format)}
+            span.item-tag
+                if item.tags && item.tags.length >0
+                    -item.tags.sort("name").each(function(item){
+                        |#{item.name}
+                    -})
+
+
+
+if page.comment
+    .ds-thread(data-thread-key="" data-title="#{item.title}" data-url="#{config.root}#{item.path}")
+
+

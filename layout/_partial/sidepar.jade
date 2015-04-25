@@ -1,0 +1,24 @@
+- var item=page,table=false
+if (table && item.toc !== false) && theme.toc.aside
+    #toc.toc-aside
+        strong.toc-title
+            #{__('contents')}
+#asidepart
+    aside.clearfix
+        each widget in theme.widgets
+            if widget === 'recentPosts'
+                include ../_widget/recentPosts.jade
+            else if widget === 'category'
+                include ../_widget/category.jade
+            else if widget === 'tag'
+                include ../_widget/tag.jade
+            else if widget === 'tagcloud'
+                include ../_widget/tagcloud.jade
+            else if widget === 'archive'
+                include ../_widget/archive.jade
+            else if widget === "links"
+                include ../_widget/links.jade
+
+
+
+

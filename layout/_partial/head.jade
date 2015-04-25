@@ -1,0 +1,47 @@
+meta(charset="utf-8")
+- var title = page.title
+-    if (is_archive()) {
+-        title = 'Archives';
+-        if (is_month()) {
+-            title += ': ' + page.year + '/' + page.month;
+-        } else if (is_year()) {
+-            title += ': ' + page.year;
+-        }
+-    } else if (is_category()) {
+-        title = 'Category: ' + page.category;
+-    } else if (is_tag()) {
+-        title = 'Tag: ' + page.tag;
+-    }
+title
+    if title
+       | #{title} |
+    | #{config.title}
+meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1")
+if config.author
+    meta(name="author" content="#{config.author}")
+if config.description
+    meta(name="description" itemprop="description" content="#{page.description}")
+else if config.description && (!is_post())
+    meta(name="description" content="#{config.description}")
+else if page.excerpt
+    meta(name="description" content="#{strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '')}")
+else if page.content
+    meta(name="description" content="#{strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150)}")
+if page.keywords
+    meta(name="keywords" content="#{page.keywords}")
+if theme.favicon
+    link(rel="icon" href="#{config.root}#{theme.favicon}")
+link(rel="stylesheet" href="/css/style.css")
+if theme.baidu_analytic
+    script(type="text/javascript").
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?7a8242177dc871d645efba4e7dad3bbd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+
+
+
