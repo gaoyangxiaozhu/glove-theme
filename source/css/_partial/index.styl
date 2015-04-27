@@ -3,69 +3,69 @@
   width 95%
   margin 0 auto
   overflow hidden
-  @media mini
+  @media only screen and (min-width 768px)
     width 96%
-  @media tablet
+  @media only screen and (min-width 1024px)
     width 94%
-  @media desktop
+  @media only screen and (min-width 1560px)
     width 82%
     
 #main
-  margin 1em 0 0
+  margin 1rem 0 0
   line-height line-height+0.3
-  @media tablet
-    margin 2em 0 0
+  @media only screen and (min-width 1024px)
+    margin 2rem 0 0
     width 75%
     float left
-    transition margin 0.5s ease-out
   section.post
     background color-section
-    margin-bottom 0.125em
+    margin-bottom .125rem
     a
       display block
-      padding 0.5em
-      @media mini
+      padding .5em
+      @media only screen and (min-width 768px)
         padding 1em
       h1
-        color #bbcb2c //新增颜色
+        color color-yellow
         line-height line-height+0.5
-        background-color #3D8B76 //新增颜色
+        background-color color-theme
         display inline-block
         position relative
         margin 0 .2em
-        left -2.6rem
-        padding-left 2rem
-        padding-right 1rem
+        left -1.8em
+        padding-left 2em
+        padding-right 1em
         border-radius 0 4px 4px 0
-        border-color darken(#3D8B76,20%)
+        border-color darken(color-theme, 20%)
+
         &:before
-          position absolute
-          content ""
-          top 100%
-          left 0
-          border-top 0 solid transparent
-          border-right-width 1em
-          border-right-color inherit
-          border-right-style solid
-          border-bottom 1em solid transparent
-          border-left 0 solid transparent
-          width 0
-          height 0
+          @media only screen and (min-width 1024px)
+            position absolute
+            content ""
+            top 100%
+            left 0
+            border-top 0 solid transparent
+            border-right-width 1em
+            border-right-color inherit
+            border-right-style solid
+            border-bottom 1em solid transparent
+            border-left 0 solid transparent
+            width 0
+            height 0
       p
         color color-font
-        padding 1em 1em
+        padding 1em
       time
       span
-        color color-font
-        margin 0.5em 0
-        font-size 0.5em
-        background-color #5aba59
-        padding .4em 10px
-        color #fff
+        margin .5em 0
+        font-size .5rem
+        background-color color-blue
+        padding .4em .6em
+        color color-white
         display inline-block
       span
         margin-left 1em
-        background-color #4d85d1 //新增颜色
+        background-color color-blue-dark
         &:before
           font-family "FontAwesome"
           content "\f02c"
@@ -82,7 +82,7 @@
   overflow hidden
   a, span
     display inline-block
-    padding 0.5em 1em
+    padding .5em 1em
   a
     color color-blue
     &:hover
@@ -90,10 +90,10 @@
       color color-theme
   .prev
     float left
-    border-left 0.5em solid color-gray
+    border-left .5em solid color-gray
     transition border-left .5s
     &:hover
-      border-left 0.5em solid color-theme
+      border-left .5em solid color-theme
   .next
     float right
   .page-number
@@ -101,7 +101,7 @@
     @media mini
       display inline-block
   .current
-    color darken(color-gray,10%)
+    color darken(color-gray, 10%)
     font-weight bold
   .space
     color color-blue
@@ -112,12 +112,12 @@
     margin-left 10% !important
 
 /*! archive layout */
-.category-icon:before,.tag-icon:before,.archive-icon:before
+.category-icon:before, .tag-icon:before, .archive-icon:before
   font-family font-icon-family
   font-smoothing()
-  color color-gray
+  color color-theme
   font-size font-size
-  padding-right 0.3em
+  padding-right .3em
 
 .category-icon:before
   content "\f07b"
@@ -132,13 +132,13 @@
   margin 1em 0
   width 97%
   padding 2em 0 2em 3%
-  @media tablet
+  @media only screen and (min-width 1024px)
     margin 2em 0
     width 18.5%
-    padding-left 0.5%
+    padding-left .5%
     float left
   background color-section
-  border-left 0.5em solid color-gray
+  border-left .5em solid color-gray
   h2
     width 90%
     font-size font-size+20
@@ -151,22 +151,22 @@
   color color-theme !important
 
 .archive-part
-  @media mini
+  @media only screen and (min-width  768px)
      min-height 200px
-  @media tablet
+  @media only screen and (min-width 1024px)
     width 78% !important
     float right
     margin-left 2% !important
   section.post
     width 100%
-    @media mini
+    @media only screen and (min-width 768px)
       float left
       width 50%
-    @media tablet
+    @media only screen and (min-width 1024px)
       width 33.333%
 
 .archive-nav
-  @media mini
+  @media only screen and (min-width 768px)
     width 100%
     float left
     margin-top 1em

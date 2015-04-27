@@ -21,7 +21,7 @@ widgets:
 
 
 ## provide six widgets:category,tag,recentPosts,archive,tagcloud,links.
-## modify links in `/layout/_widget/links.ejs`.
+## modify links in `/layout/_widget/links.jade`.
 
 #### RSS
 rss: /atom.xml
@@ -36,17 +36,7 @@ imglogo:
   enable: true             ## display image logo true/false.
   src: img/myLogo.png       ## `.svg` and `.png` are recommended,please put image into the theme folder `/pacman/source/img`.
 favicon: img/myFavicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/pacman/source/img`.     
-apple_icon: img/myPacman.jpg ## size:114px*114px,please put image into the theme folder `/pacman/source/img`.
 
-#### Author Avatar Picture
-author_img_enable: true ## display author avatar picture
-dataURI: false
-## if the picture's format is dataURI please set the value to true,otherwise set the value to false.
-## convert an image into base 64 data URIs http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/ .
-author_img_data: ''
-## paste the dataURI in ONE LINE and included it by ''.
-author_img: img/author.jpg ## size:220px*220px.
-## if the picture's format is `.png` or `.jpg`  instead of dataURI,you should set the `dataURI` value to false.
 
 #### Font
 ShowCustomFont: true  
@@ -55,8 +45,6 @@ ShowCustomFont: true
 #### Toc
 toc:
   article: true   ## show contents in article.
-  aside: true     ## show contents in aside.
-## you can set both of the value to true of neither of them.
 ## if you don't want display contents in a specified post,you can modify `front-matter` and add `toc: false`.
 
 #### Comment

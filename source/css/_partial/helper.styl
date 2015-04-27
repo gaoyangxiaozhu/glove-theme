@@ -10,81 +10,8 @@ footer.article-footer
   background color-section
   padding 0 4%
   margin 0
-  border-top 1px solid lighten(color-gray,30%)
-  
-//share
-.article-share
-  float right
-  width 100%
-  @media phone
-    width 60%
-  @media mini
-    width 40%
-  
-.share 
-  span
-    float right
-    height 3em
-    width 1em
-    margin-right 0.5em
-    position relative
-    color lighten(color-gray,20%)
-    &:before
-      font-family font-icon-family
-      content "\f064"
-      font-size 1em
-      font-smoothing()
-      absolute-center(1.5em)
-  a
-    float right
-    width 3em
-    height 3em
-    display block
-    position relative
-    &:before
-      font-size font-size
-      font-family font-icon-family
-      text-align center
-      color color-font
-      font-smoothing()
-      absolute-center(1.5em)
-    &:hover:before
-      color color-white
-  
-.article-share-twitter
-  &:before
-    content "\f099"
-  &:hover
-    background color-twitter
-    text-shadow 0 1px darken(color-twitter, 20%)
+  border-top 1px solid lighten(color-gray, 30%)
 
-.article-share-facebook
-  &:before
-    content "\f09a"
-  &:hover
-    background color-facebook
-    text-shadow 0 1px darken(color-facebook, 20%)
-
-.article-share-weibo
-  &:before
-    content "\f18a"
-  &:hover
-    background color-weibo
-    text-shadow 0 1px darken(color-weibo, 20%)
-
-.article-share-qrcode
-  &:before
-    content "\f029"
-  &:hover
-    background color-qrcode
-    text-shadow 0 1px darken(color-qrcode, 20%)
-
-.article-back-to-top
-  &:before
-    content "\f062"
-  &:hover
-    background color-top
-    text-shadow 0 1px darken(color-top, 20%)
 
 //qrcode
 .qrcode
@@ -99,10 +26,10 @@ footer.article-footer
   visibility hidden
   z-index 10
   transition opacity .5s
-  @media tablet
+  @media only screen and (min-width 1024px)
     absolute-center(20em)
     position fixed
-  span 
+  span
     display block
     width 80%
     height 1.5em
@@ -136,8 +63,8 @@ footer.article-footer
   visibility visible
 
 //tags&categories
-.article-tags,.article-categories
-  padding 0.5em 0
+.article-tags, .article-categories
+  padding .5em 0
   float left
   @media phone
     width 50%
@@ -151,8 +78,8 @@ footer.article-footer
 .article-tags
   a
     float left
-    padding .1em 0.5em
-    margin 0.3em
+    padding .1em .5em
+    margin .3em
     background #5aba59
     color #fff
     &:hover
@@ -163,8 +90,8 @@ footer.article-footer
   margin-right .3em
 
 .article-category-link
-  padding 0.5em
-  margin 0 0.3em
+  padding .5em
+  margin 0 .3em
   &:hover
     color #bbcb2c
   &:before
@@ -175,31 +102,31 @@ footer.article-footer
 
 //page nav
 .article-nav
-  padding 0 10%
+  padding 0 1%
   position relative
-  @media mini
+  @media only screen and (min-width 768px)
     padding 0 4%
   strong
-    font-size 0.6em
+    font-size .6em
   a
     display block
-  .prev,.next
+  .prev, .next
     display inline-block
+    box-sizing border-box
     position relative
     color color-white
-    padding 0 1em 0 1em
+    padding 0 1em
     height 2em
     line-height 2em
+    width 100%
+    margin-bottom .5em
     &:hover
       color #bbcb2c
   .prev
-    width 100%
-    float left
-    @media mini
+    background-color #3D8B76
+    @media only screen and (min-width 768px)
       width auto
       float left
-      text-align left
-      background-color #3D8B76
       &:before
         border-right 1rem solid #3D8B76
         content ""
@@ -221,14 +148,10 @@ footer.article-footer
         border-bottom 1rem solid #3D8B76
         border-left 1rem solid #3D8B76
   .next
-    width 100%
-    float left
-    text-align left
-    @media mini
+    background-color #3D8B76
+    @media only screen and (min-width 768px)
       width auto
       float right
-      text-align right
-      background-color #3D8B76
       &:after
         border-left 1rem solid #3D8B76
         content ""
@@ -252,7 +175,7 @@ footer.article-footer
 
 #toTop
   display none
-  @media mini
+  @media only screen and (min-width 768px)
     position fixed
     z-index 100
     display block
@@ -289,22 +212,21 @@ section.comment
 //toc
 .toc-article
   background color-code
-  margin 2em 0 0 0.5em
+  margin 2em 0 0 .5em
   padding 1em
   strong
-    padding 0.3em 0
-
+    padding .3em 0
 #toc
   line-height 1em
-  font-size 0.8em
+  font-size .8em
   float right
+  color color-theme
   .toc
-    padding 0 
+    padding 0
     li
       list-style-type none
-  .toc-child 
+  .toc-child
     padding-left 1.5em
-
 #toc.toc-aside
   display none
   width 13%
@@ -318,7 +240,7 @@ section.comment
   opacity .6
   transition opacity 1s ease-out
   strong
-    padding 0.3em 0
+    padding .3em 0
     color color-font
   &:hover
     transition opacity .3s ease-out

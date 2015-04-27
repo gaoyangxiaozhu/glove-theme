@@ -7,7 +7,7 @@
                 #toc.toc-article
                     strong.toc-title
                         | #{__('contents')}
-                    | #{ toc(item.content)}
+                    !=toc(item.content)
             !=item.content
          include footer.jade
     include pagination.jade
