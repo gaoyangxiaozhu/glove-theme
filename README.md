@@ -34,8 +34,8 @@ Modify language option in hexo/_config.yml
 - English: default
 - 简体中文：zh-CN
 
->  ####Menu
 ```
+####Menu
 menu:
   Home: /
   Archives: /archives
@@ -48,7 +48,7 @@ menu:
 imglogo:
    enable: false             ## display image logo true/false.
    src:  ## `.svg` and `.png` are recommended,please put image into the theme folder `/glove/source/img`.
-  favicon: img/myFavicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/glove/source/img`.
+   favicon: img/myFavicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/glove/source/img`.
 ```
 ==Widgets
 
@@ -106,6 +106,7 @@ baidu_analytics: false
 + jiathis
 
 #### jiathis
+```
 jiathis:
   enable: false ## if you use jiathis as your share tool,the built-in share tool won't be display.
-
+```
