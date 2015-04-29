@@ -1,13 +1,8 @@
 ##### Menu
 menu:
-  主页: /
-  归档: /archives
-  关于我: /page/resume.html
-## you can create `tags` and `categories` folders in `../source`.
-## And create a `index.md` file in each of them.
-## set `front-matter`as
-## layout: tags (or categories)
-## title: tags (or categories)
+  Home: /
+  Archives: /archives
+  About: /about
 ## ---
 
 #### Widgets
@@ -27,9 +22,9 @@ widgets:
 rss: /atom.xml
 
 #### author information
-github: https://github.com/gaoyangxiaozhu
-weibo:  http://weibo.com/5313420647
-facebook: https://www.facebook.com/gyyzyp
+github: ##eg: 'git_name' will be 'http://github.com/git_name'
+weibo:  ##eg: 'weibo_name' will be 'http://weibo.com/weibo_name'
+facebook: ##eg: 'facebook_name' will be 'http://facebook.com/facebook_name'
 
 #### Image
 imglogo:
@@ -49,8 +44,8 @@ toc:
 
 #### Comment
 duoshuo: 
-  enable: true  ## duoshuo.com
-  short_name:  gaoyangxiaozhu  ## duoshuo short name.
+  enable: false  ## duoshuo.com
+  short_name: ## duoshuo short name.
 
 #### Share button
 jiathis:
@@ -58,11 +53,11 @@ jiathis:
 
 #### Analytics
 google_analytics:
-  enable: true
-  id:  UA-62258203-1 ## e.g. UA-1766729-8 your google analytics ID.
-  site: auto ## e.g. yangjian.me your google analytics site or set the value as auto.
+  enable: false
+  id:   ## e.g. UA-1766729-8 your google analytics ID.
+  site: ## e.g. yangjian.me your google analytics site or set the value as auto.
 ## You MUST upgrade to Universal Analytics first!
 ## https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN
 
-baidu_analytics: true
+baidu_analytics: false
 
