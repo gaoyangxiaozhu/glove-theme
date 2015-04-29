@@ -34,6 +34,7 @@ Modify language option in hexo/_config.yml
 - English: default
 - 简体中文：zh-CN
 
+##Menu
 ```
 ####Menu
 menu:
