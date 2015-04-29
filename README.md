@@ -50,7 +50,7 @@ imglogo:
    src:  ## `.svg` and `.png` are recommended,please put image into the theme folder `/glove/source/img`.
    favicon: img/myFavicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/glove/source/img`.
 ```
-==Widgets
+##Widgets
 
 ```
 widgets:
@@ -108,5 +108,5 @@ baidu_analytics: false
 #### jiathis
 ```
 jiathis:
-  enable: false ## if you use jiathis as your share tool,the built-in share tool won't be display.
+  enable: false
 ```
