@@ -16,27 +16,29 @@ erate/*! index layout */
   @media only screen and (min-width 1024px)
     margin 2rem 0 0
     width 75%
-    float left
+    float right
   section.post
     background color-section
-    margin-bottom .125rem
+    margin-bottom .8rem
+    box-shadow 0 1px 1px
     a
       display block
-      padding .5em
       @media only screen and (min-width 768px)
         padding 1em
       h1
         color color-yellow
         line-height line-height+0.5
         background-color color-theme
-        display inline-block
         position relative
-        margin 0 .2em
-        left -1.8em
         padding-left 2em
         padding-right 1em
-        border-radius 0 4px 4px 0
         border-color darken(color-theme, 20%)
+        @media only screen and (min-width 1024px)
+          display inline-block
+          margin 0 .2em
+          left -1.5em
+          border-radius 0 4px 4px 0
+
 
         &:before
           @media only screen and (min-width 1024px)
@@ -57,7 +59,7 @@ erate/*! index layout */
         padding 1em
       time
       span
-        margin .5em 0
+        margin .5em
         font-size .5rem
         background-color color-blue
         padding .4em .6em
