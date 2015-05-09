@@ -15,11 +15,11 @@ section(class="#{item.layout}" itemscope itemprop="blogPost")
                         p(itemprop="description")
                             | #{strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140)}
             time(datatime="#{date_xml(item.date)}" itemprop="dataPublished") #{item.date.format(config.date_format)}
-            span.item-tag
-                if item.tags && item.tags.length >0
-                    -item.tags.sort("name").each(function(item){
+            if item.tags && item.tags.length >0
+                -item.tags.sort("name").each(function(item){
+                    span.item-tag
                         |#{item.name}
-                    -})
+                -})
 
 
 
